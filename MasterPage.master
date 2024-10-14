@@ -1,0 +1,378 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage2" %>
+<%@Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Lotus Portico Club</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="/cdn-cgi/apps/head/3ts2ksMwXvKRuG480KNifJ2_JNM.js"></script><link rel="icon" href="images/LOTUSIMAGE [1].png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800%7COswald:300,400,500%7COld+Standard+TT:400,400i,700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <style>
+    
+    .sn_whatsup {
+    position: fixed;
+    top: 470px;
+    right: 10px;
+     z-index: 1000;
+   
+    border-radius: 10px;
+}
+
+ .sticky-btn a
+        {
+            top: 247px;
+            position: fixed;
+            right: -68px;
+            z-index: 1000;
+            transform: rotate(-90deg);
+            background-color: red;
+            padding: 10px 22px 37px;
+            height: 0px;
+            background-color: #eb610c;
+            color: #fff;
+            font-size: 21px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        
+          .sticky-btn1 a
+        {
+            top: 380px;
+            position: fixed;
+            right: -68px;
+            z-index: 1000;
+            transform: rotate(-90deg);
+            background-color: red;
+            padding: 10px 22px 37px;
+            height: 0px;
+            background-color: #A6D35E;
+            color: #fff;
+            font-size: 21px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+  
+
+    </style>
+    <style>
+       #txtname::placeholder { /* Firefox */
+  color:black;
+}
+    #txtnumber::placeholder { /* Firefox */
+  color:black;
+}
+.form-wrap::placeholder
+{
+    color:black;
+    }
+    </style>
+       <%--  code for Disable previews date--%>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var today = new Date();
+                var month = ('0' + (today.getMonth() + 1)).slice(-2);
+                var day = ('0' + today.getDate()).slice(-2);
+                var year = today.getFullYear();
+                var date = year + '-' + month + '-' + day;
+                $('[id*=txtDateIn]').attr('min', date);
+                $('[id*=txtDateout]').attr('min', date);
+            });
+</script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<!-- Whatsapp Sticky -->
+       <div class="sn_whatsup">
+    <a href="https://wa.me/9305063845" target="_blank">
+        <img src="images/w5.png" width="50px" alt=""/>
+    </a>
+      </div>
+
+<body>
+ <form id="form1" runat="server">
+     <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap context-dark">
+          <nav class="rd-navbar rd-navbar-thin" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-fixed" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                 <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button> 
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="Default.aspx"><img src="images/LOGO- [1].png" alt="" width="160" height="68" srcset="images/LOGO- [1].png 2x"  /></a>
+                  <div class="rd-navbar-block">
+                    <ul class="list-inline-bordered">
+                      <li>
+                        <button class="rd-navbar-popup-toggle text-uppercase font-weight-light" data-rd-navbar-toggle="#rd-navbar-login-1"><span class="mdi mdi-pencil inset-right-4 text-gray-750-white"></span><span class="rd-navbar-hidden">Book now</span></button>
+                        <div class="rd-navbar-popup bg-gray-700" id="rd-navbar-login-1">
+                          <h4>Book now</h4>
+                          <form class="rd-form rd-form-small" action="">
+                          <asp:ScriptManager runat="server" ID="c3"></asp:ScriptManager>
+                           <div class="form-wrap">
+                            <asp:TextBox ID="txtname"  runat="server" CssClass="form-input"  placeholder="Name"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ForeColor="white" Display="Dynamic"  ValidationGroup="book"  ControlToValidate ="txtname" ErrorMessage="Please Enter Name" ></asp:RequiredFieldValidator>                
+                            </div>
+                             <div class="form-wrap">
+                            <asp:TextBox ID="txtnumber"  runat="server" CssClass="form-input"  placeholder="Contact"></asp:TextBox>
+                             <cc2:FilteredTextBoxExtender ID="FilteredTextBoxExtender4" FilterType="Numbers" runat="server" TargetControlID="txtnumber"></cc2:FilteredTextBoxExtender>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="white" Display="Dynamic" ValidationGroup="book"  ControlToValidate ="txtnumber" ErrorMessage="Please Enter Number" ></asp:RequiredFieldValidator>                
+                            </div>
+                            <div class="form-wrap">
+                            <asp:TextBox ID="txtDateIn"  TextMode="Date" runat="server" CssClass="form-input"  placeholder="Check in" ></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="white"  ValidationGroup="book" Display="Dynamic" ControlToValidate ="txtDateIn" ErrorMessage="Please select check-in date" ></asp:RequiredFieldValidator>
+                
+                              <%--<input class="form-input" id="register-name-11" type="text" name="username" data-constraints="@Required">
+                              <label class="form-label" for="register-name-11">Check in</label>--%>
+                            </div>
+                            <div class="form-wrap">
+                             <asp:TextBox ID="txtDateout"  TextMode="Date" runat="server" CssClass="form-input"  placeholder="Check out"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="white"  ValidationGroup="book" Display="Dynamic" ControlToValidate ="txtDateout" ErrorMessage="Please select check-out date" ></asp:RequiredFieldValidator>
+                
+                             <%-- <input class="form-input" id="register-name-21" type="text" name="username" data-constraints="@Required">
+                              <label class="form-label" for="register-name-21">Check out</label>--%>
+                            </div>
+                            <div class="form-wrap">
+                            <asp:DropDownList ID="txtGuest" runat="server" Cssclass="form-input">
+                              <asp:ListItem  Value="">Guests</asp:ListItem>               
+                              <asp:ListItem Value="1">1 Guest</asp:ListItem>
+                              <asp:ListItem Value="2">2 Guests</asp:ListItem>
+                              <asp:ListItem Value="3">3 Guests</asp:ListItem>
+                              <asp:ListItem Value="4">4 Guests</asp:ListItem>
+                               <asp:ListItem Value="4">More than 4 </asp:ListItem>
+                           </asp:DropDownList>
+                           <asp:RequiredFieldValidator ID="rfvChildren"  runat="server" ForeColor="white"  ValidationGroup="book" Display="Dynamic" type="submit"  ControlToValidate ="txtGuest" ErrorMessage="Please select any option" ></asp:RequiredFieldValidator>
+                              <%--<input class="form-input" id="register-name-31" type="text" name="username" data-constraints="@Required">
+                              <label class="form-label" for="register-name-31">Guests</label>--%>
+                            </div>
+                            <div class="form-wrap">
+                               <asp:Button runat="server" Text="Book Now" ID="btnbook" OnClick="btn_booking" ValidationGroup="book" CssClass="button button-block button-primary button-winona"  />
+                          <%--    <button class="button button-block button-primary button-winona" type="submit">Book Now</button>--%>
+                            </div>
+                          </form>
+                        </div>
+                      </li>
+                      <li class="font-weight-light"><a href="tel:+91 93050 63845"><span class="mdi mdi-cellphone-android inset-right-4 text-gray-750-white"></span><span class="rd-navbar-hidden rd-navbar-title">+91 93050 63845</span></a></li>
+                    </ul>
+                  <%--  <button class="rd-navbar-search-toggle" data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>--%>
+                  </div>
+                </div>
+                <!-- RD Navbar Search-->
+             <%--   <div class="rd-navbar-search" id="rd-navbar-search-1">
+                  <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live-1" method="GET">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
+                      <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text" name="s" autocomplete="off">
+                      <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
+                    </div>
+                    <button class="rd-search-form-submit fa-search" type="submit"></button>
+                  </form>
+                </div>--%>
+                <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="Default.aspx">
+                  <img src="images/LOGO- [1].png" alt="" width="185" height="58" srcset="images/LOGO- [1].png 2x"/></a>
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Default.aspx" id="home_menu">Home</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="AboutUs.aspx" id="about_menu">About</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="SingleRoom.aspx" id="room_menu">Rooms</a>
+
+                      <!-- RD Navbar Dropdown-->
+                     <%-- <ul class="rd-menu rd-navbar-dropdown" id="DivMenuRoom" runat="server">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Single Room</a></li>
+                        
+                      </ul>--%>
+                    </li>
+                     <li class="rd-nav-item"><a class="rd-nav-link" href="Gallery.aspx" id="gallery_menu">Gallery</a>
+                    </li>
+                   <%-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Blog</a>
+                      <!-- RD Navbar Dropdown-->
+                      <ul class="rd-menu rd-navbar-dropdown">
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Grid Blog</a></li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Sidebar Blog</a></li>
+                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Single Blog Post</a></li>
+                      </ul>
+                    </li>--%>
+                   <%-- <li class="rd-nav-item"><a class="rd-nav-link" href="#">Pages</a>
+                      <!-- RD Navbar Megamenu-->
+                      <ul class="rd-menu rd-navbar-megamenu">
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Typography</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Buttons</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Progress bars</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Tabs</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Tables</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Accordions</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Team</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Testimonials</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Forms</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Gallery</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Masonry Gallery</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Modern Gallery</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">404 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">503 Page</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="#">Coming Soon</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="under-construction.html">Under Construction</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="about-me.html">About Me</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="pricing.html">Pricing</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-megamenu-item">
+                          <ul class="rd-megamenu-list">
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="careers.html">Careers</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="search-results.html">Search results</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services.html">Services</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-service.html">Single Service</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-job.html">Single Job</a></li>
+                            <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="terms-of-use.html">Terms of use</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>--%>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="ContactUs.aspx" id="contact_menu">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      
+    <div>
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div>
+
+
+     <!-- Page Footer-->
+      <footer class="section footer-linked bg-gray-850">
+        <div class="footer-linked-main text-gray-350">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-8">
+                <h5 class="footer-title">Quick Links</h5>
+                <hr class="offset-right-1">
+                <div class="row row-20">
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs" >
+                     <li><a href="Default.aspx">Home</a></li>
+                  <li><a href="SingleRoom.aspx"> Rooms</a></li> 
+                    <li><a href="ContactUs.aspx">Booking</a></li>
+                    <%--  <li><a href="SingleRoom.aspx?serid=1">Deluxe Room</a></li>
+                      <li><a href="SingleRoom.aspx?serid=2">Premium Room</a></li>
+                      <li><a href="SingleRoom.aspx?serid=3">Classic Room</a></li>
+                     --%>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">                     
+                      <li><a href="AboutUs.aspx">About Us</a></li>
+                       <li><a href="ContactUs.aspx">Contacts</a></li>
+                      <li><a href="Gallery.aspx">Gallery</a></li>
+                    </ul>
+                  </div>                
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Instagram</a></li>                     
+                       
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-4">
+                <h5 class="footer-title">Contact Information</h5>
+                <hr>
+                <ul class="list-sm">
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a href="https://maps.app.goo.gl/GFpaWZeFWPf1UAjV9">Jankipuram Extension, Kursi Road,<br/> Lucknow, 226021</a></li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-phone text-gray-700"></span>
+                    <ul class="list-0">
+                      <li><a href="tel:+91 93050 63845">+91-9305063845</a>, <a href="tel:+91 9305063845">+91-9305063845</a></li>
+                 <%--     <li><a href="tel:+91 9305063845">+91-9305063845</a></li>--%>
+                    </ul>
+                  </li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-email-outline text-gray-700"></span><a href="mailto:lotusporticoclub@gmail.com">lotusporticoclub@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-linked-aside">
+          <div class="container">
+            <div class="footer-minimal-inner">
+              <!-- Rights-->
+              <p style="color:White;text-align:center">© 2024 Powered By <a href="http://dynamicconsultants.in/" target="_blank">Techwone Consultants Pvt. Ltd.</a>&nbsp; All Rights Reserved.</p>
+              <%--<p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/><a href="">Terms of Use</a><span> and</span><span>&nbsp;</span><a href="">Privacy Policy</a></p>--%>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="preloader"> 
+      <div class="preloader-logo"><img src="images/logo-default-165x38.png" alt="" width="165" height="38" srcset="images/logo-default-165x38.png 2x"/>
+      </div>
+      <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+	
+	<!--LIVEDEMO_00 -->
+
+	<script type="text/javascript">
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-7078796-5']);
+	    _gaq.push(['_trackPageview']);
+	    (function () {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();</script>
+		
+  <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>                                                                                                                                                                                          (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-P9FT69');</script><!-- End Google Tag Manager --></body>
+ 
+    
+     </form>     
+     
+  
+</body>
+
+</html>
+
